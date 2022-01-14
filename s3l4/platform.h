@@ -40,9 +40,11 @@ public:
     void RandRotatePlatform();
 
     // Перегрузка оператора '+' (Platform + int)
-    friend Platform operator+(const Platform& Platform, int value);
+    friend Platform operator+(const Platform& platform, int angle);
+
     // Перегрузка префиксного оператора '++'
     Platform& operator++();
+
     // Перегрузка постфиксного оператора '++'
     Platform operator++ (int);
 };

@@ -27,83 +27,31 @@ int main() {
 	Rating MyRating;
 	Button MyButton;
 
-	////////////
-	cout << "\n1) Тест возврата значений из метода класса Ball через ссылку (&) и указатель (*)" << endl;
-	MyBall.SetBall(1, 2, "OllRight");
-	string name; string& N = name; 
-	MyBall.GetNameLink(name);
+	
+	cout << "\nЛаба 8. Модифицировать проект путем добавления в один из классов \nкак минимум одного статического поля и одного статического метода:" << endl;
 
-	int* test_x = new int;
-	int* test_y = new int;
-
-	MyBall.GetX(test_x);
-	MyBall.GetY(test_y);
-
-	cout << *test_x << endl;
-	cout << *test_y << endl;
-	cout << N << endl;
-
-	_getch();
-	////////////
-
-	////////////
-	cout << "\n2) Тест списка нажатых кнопок с использованием указателя 'this'" << endl;
 	// Формирование объектов класса Button:
 	Button A(0);
 	Button B(0);
 	Button C(1);
 	Button D(1);
 
+	cout << ("\nВызов статической компанентной функции: 'Напечатать список'\n\n");
 	// Вызов статической компанентной функции:
 	Button::reprint();
 
+	cout << ("\n\nДобавление элементов в список.\n\n");
 	// Включение созданных компанентов в двусвязанный список:
 	A.Add(); B.Add(); C.Add(); D.Add();
 
+	cout << ("Вызов статической компанентной функции: \'Напечатать список\'\n\n");
 	// Печать в обратном порядке значений элементов списка:
 	Button::reprint();
 
 	_getch();
 	////////////
 
-	////////////
-	cout << "\n\n3) Дружественная функция обмена кординатами классов Ball и Coin:" << endl;
-	MyBall.DisplayBall();
-	cout << endl;
-	MyCoin.RandXYCoin();
-	MyCoin.DisplayCoin();
-	cout << "\nОБМЕН КООРДИНАТАМИ:" << endl;
-	KoordExchange(MyBall, MyCoin);
-	cout << endl;
-	MyBall.DisplayBall();
-	cout << endl;
-	MyCoin.DisplayCoin();
-
-	_getch();
-	////////////
-
-	////////////
-	cout << "\n3) Перегрузка оператора '+' для класса Platform" << endl;
-	Platform PlatformPoor(89,10);
-	PlatformPoor.DisplayPlatform();
-	cout << "Прибавим к углу 2 градуса:" << endl;
-	PlatformPoor = PlatformPoor + 2;
-	PlatformPoor.DisplayPlatform();
-	cout << "\n" << endl;
-	cout << "Перегрузка оператора \'++\' (два варианта, префиксный и постфиксный) \n для класса \'оценка\' Platform" << endl;
-	PlatformPoor.SetPlatform(88,10);
-	PlatformPoor.DisplayPlatform();
-	cout << endl;
-	cout << "Использование оператора \'++\' (префиксный):" << endl;
-	++PlatformPoor;
-	PlatformPoor.DisplayPlatform();
-	cout << endl;
-	cout << "Использование оператора \'++\' (постфиксный):" << endl;
-	PlatformPoor++;
-	PlatformPoor.DisplayPlatform();
-
-	_getch();
-	////////////
+	
 
 	int f = 1;
 	int vib;
