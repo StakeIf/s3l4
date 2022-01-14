@@ -12,9 +12,16 @@ class Button
 {
 private:
     bool OnOff; //Угол наклона платформы
+
+    static Button* lastButton;
+    Button* prev;
+    Button* next;
 public:
     // Конструктор
     Button();
+
+    // Конструктор
+    Button(bool OnOff);
 
     // Фун-ии получения данных из полей
     int GetOnOff();
@@ -27,6 +34,9 @@ public:
 
     // Вывод  на экран
     void DisplayButton();
+
+    void Add(void);
+    static void reprint(void);
 
     //нажать на кнопку
     void PressButton();

@@ -8,6 +8,8 @@
 
 using namespace std;
 
+class Coin;
+
 class Ball
 {
 private:
@@ -19,9 +21,9 @@ public:
     Ball();
 
     // Фун-ии получения данных из полей
-    int GetX();
-    int GetY();
-    string GetName();
+    void GetX(int* xi);
+    void GetY(int* yi);
+    void GetNameLink(string& name);
 
     // Деструктор
     ~Ball();
@@ -37,5 +39,8 @@ public:
 
     //Сделать шаг
     void MoveBall();
+
+    // Дружественная функция обмена кординатами классов Ball и Coin
+    friend void KoordExchange(Ball& ball, Coin& Coin);
 };
 

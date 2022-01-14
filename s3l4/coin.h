@@ -6,13 +6,15 @@
 #include <locale.h>
 #include <conio.h>
 
+#include "ball.h"
+
 using namespace std;
 
 class Coin
 {
 private:
-    int x;
-    int y;
+    int x = 0;
+    int y = 0;
 public:
     // Конструктор
     Coin();
@@ -35,4 +37,7 @@ public:
 
     //Случайная смена положени монеты (смена координат х у)
     void RandXYCoin();
+
+    // Дружественная функция обмена кординатами классов Ball и Coin
+    friend void KoordExchange(Ball& ball, Coin& Coin);
 };

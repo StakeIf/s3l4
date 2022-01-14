@@ -6,6 +6,12 @@ Button::Button()
     OnOff = 0;
 }
 
+// Конструктор
+Button::Button(bool OnOff)
+{
+    this->OnOff = OnOff;
+}
+
 // Фун-ии получения данных из полей
 int Button::GetOnOff()
 {
@@ -38,4 +44,39 @@ void Button::PressButton() {
 Button::~Button()
 {
     ;
+}
+
+// Добавление элемента в конец списка
+void Button::Add(void)
+{
+    if (lastButton == NULL)
+        this->prev = NULL;
+    else
+    {
+        lastButton->next = this;
+        prev = lastButton;
+    }
+    lastButton = this;
+    this->next = NULL;
+}
+
+// Вывод на дисплей содержимого списка
+void Button::reprint(void)
+{
+    Button* uk;   // Вспомогательный указатель
+    uk = lastButton;
+    if (uk == NULL)
+    {
+        cout << "Список пуст!";
+        return;
+    }
+    else
+        cout << "\nСодержимое списка:\n";
+
+    // Цикл печати в обратном порядке значений элементов списка:
+    while (uk != NULL)
+    {
+        cout << uk->OnOff << '\t';
+        uk = uk->prev;
+    }
 }

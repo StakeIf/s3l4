@@ -38,9 +38,9 @@ void Coin::InpCoinData()
 void Coin::DisplayCoin()
 {
     cout << "Данные монеты: \n  x = " << x << "\n  y = " << y << endl;
-
 }
 
+//Случайные значение координат
 void Coin::RandXYCoin() {
     x = rand() % 7;
     y = rand() % 7;
@@ -50,4 +50,16 @@ void Coin::RandXYCoin() {
 Coin::~Coin()
 {
     ;
+}
+
+// Дружественная функция обмена кординатами классов Ball и Coin
+void KoordExchange(Ball& ball, Coin& coin)
+{
+    int x, y;
+    x = ball.x;
+    ball.x = coin.x;
+    coin.x = x;
+    y = ball.y;
+    ball.y = coin.y;
+    coin.y = y;
 }

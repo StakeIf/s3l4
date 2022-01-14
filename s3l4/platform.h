@@ -17,6 +17,9 @@ public:
     // Конструктор
     Platform();
 
+    // Конструктор
+    Platform(int angle, int height);
+
     // Фун-ии получения данных из полей
     int GetAngle();
     int GetHeight();
@@ -35,4 +38,11 @@ public:
 
     //Случайное изменение угла
     void RandRotatePlatform();
+
+    // Перегрузка оператора '+' (Platform + int)
+    friend Platform operator+(const Platform& Platform, int value);
+    // Перегрузка префиксного оператора '++'
+    Platform& operator++();
+    // Перегрузка постфиксного оператора '++'
+    Platform operator++ (int);
 };

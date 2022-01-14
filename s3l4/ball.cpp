@@ -9,19 +9,19 @@ Ball::Ball()
 }
 
 // Фун-ии получения данных из полей
-int Ball::GetX()
+void Ball::GetX(int* xi)
 {
-    return x;
+    *xi = x;
 }
 
-int Ball::GetY()
+void Ball::GetY(int* yi)
 {
-    return y;
+    *yi = y;
 }
 
-string Ball::GetName()
+void Ball::GetNameLink(string& name)
 {
-    return this->Name;
+    name = this->Name;
 }
 
 
@@ -70,3 +70,4 @@ Ball::~Ball()
 {
     ;
 }
+
