@@ -20,6 +20,7 @@ int main() {
 	system("chcp 1251");
 	system("cls");
 
+	/*
 	Ball MyBall;
 	Platform MyPlatform;
 	Platform* PlatformSquare = new Platform;
@@ -27,10 +28,34 @@ int main() {
 	Rating MyRating;
 	Button MyButton;
 
-	Coin masCoin[5];
+	/*Coin masCoin[5];
 	for (int i = 0; i < 5; i++)
-		masCoin[i].RandXYCoin();
+		masCoin[i].RandXYCoin();*/
 
+	cout << "Лабораторная 11" << endl;
+	Coin Coin1[3], Coin2[2][2];
+
+	// Присваивание
+	Coin1[0].SetCoin(3,3);
+	Coin1[1].SetCoin(4, 4);
+	Coin1[2].SetCoin(5, 5);
+
+	for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 2; j++)
+			Coin2[i][j].SetCoin(j,j+2);
+
+	// Вывод
+	cout << "Одномерный массив размером [3]" << endl;
+	for (int i = 0; i < 3; i++)
+		Coin1[i].DisplayCoin();
+
+	cout << endl;
+	cout << "Двумерный массив размером [2][2]" << endl;
+	for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 2; j++)
+			Coin2[i][j].DisplayCoin();
+
+	/*
 	cout << "Лабораторная 9" << endl;
 	cout << "МЯЧ: \n" << endl;
 	Ball Ball1;

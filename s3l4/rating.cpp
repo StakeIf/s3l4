@@ -63,5 +63,3 @@ Rating::~Rating()
     ;
 }
 
-
-}

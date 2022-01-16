@@ -26,6 +26,11 @@ void Coin::SetY(int y) {
     this->y = y;
 }
 
+void Coin::SetCoin(int x, int y) {
+    this->x = x;
+    this->y = y;
+}
+
 
 // Фун-ии получения данных из полей
 int Coin::GetX()
