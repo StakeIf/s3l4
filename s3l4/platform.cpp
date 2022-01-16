@@ -7,10 +7,28 @@ Platform::Platform()
     height = 0;
 }
 
-// Конструктор
+// Конструктор с одним параметром
+Platform::Platform(int height)
+{
+    angle = 0;
+    this->height = height;
+}
+
+// Конструктор с параметрами
 Platform::Platform(int angle, int height)
 {
     this->angle = angle;
+    this->height = height;
+}
+
+//Установка угла
+void Platform::SetAngle(int angle) 
+{
+    this->angle = angle;
+}
+//Установка длины
+void Platform::SetHeight(int height)
+{
     this->height = height;
 }
 
@@ -23,13 +41,6 @@ int Platform::GetAngle()
 int Platform::GetHeight()
 {
     return height;
-}
-
-// Инициализация структуры 
-void Platform::SetPlatform(int anglei, int heighti)
-{
-    angle = anglei;
-    height = heighti;
 }
 
 // Ввод 

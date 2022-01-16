@@ -12,16 +12,16 @@ Button::Button(bool OnOff)
     this->OnOff = OnOff;
 }
 
+//Получение значения 
+void Button::SetButton(bool onoffi)
+{
+    OnOff = onoffi;
+}
+
 // Фун-ии получения данных из полей
 int Button::GetOnOff()
 {
     return OnOff;
-}
-
-// Инициализация структуры 
-void Button::SetButton(bool onoffi)
-{
-    OnOff = onoffi;
 }
 
 // Вывод 

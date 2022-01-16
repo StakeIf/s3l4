@@ -7,9 +7,12 @@ class Rating
 private:
     int points;
     Coin ArrayCoins[5];
+
 public:
     // Конструктор
     Rating();
+    Rating(int points);
+    Rating(int pointsi, Coin array[5]);
 
     // Фун-ии получения данных из полей
     int GetPoints();
@@ -17,8 +20,8 @@ public:
     // Деструктор
     ~Rating();
 
-    // Инициализация структуры 
-    void SetRating(int pointsi, Coin array[5]);
+    void SetPoint(int pointsi);
+    void SetCoinArray(Coin array[5]);
 
     // Вывод  на экран
     void DisplayRating();

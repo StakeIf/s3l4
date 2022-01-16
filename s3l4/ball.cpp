@@ -1,11 +1,40 @@
 #include "Ball.h"
 
-// Конструктор
+// Конструкторы
 Ball::Ball()
 {
     x = 0;
     y = 0;
     Name = "";
+}
+
+Ball::Ball(string name)
+{
+    x = 0;
+    y = 0;
+    this->Name = name;
+}
+
+Ball::Ball(int x, int y, string name)
+{
+    this->x = x;
+    this->y = y;
+    this->Name = name;
+}
+//Установщики значений
+void Ball::SetX(int x) 
+{
+    this->x = x;
+}
+
+void Ball::SetY(int y)
+{
+    this->y = y;
+}
+
+void Ball::SetName(string name)
+{
+    this->Name = name;
 }
 
 // Фун-ии получения данных из полей
@@ -22,15 +51,6 @@ void Ball::GetY(int* yi)
 void Ball::GetNameLink(string& name)
 {
     name = this->Name;
-}
-
-
-// Инициализация структуры 
-void Ball::SetBall(int xi, int yi, string Namei)
-{
-    x = xi;
-    y = yi;
-    this->Name = Namei;
 }
 
 // Ввод 
@@ -70,4 +90,5 @@ Ball::~Ball()
 {
     ;
 }
+
 

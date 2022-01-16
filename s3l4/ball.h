@@ -19,6 +19,12 @@ private:
 public:
     // Конструктор
     Ball();
+    Ball(string name);
+    Ball(int x, int y, string name);
+
+    void SetX(int x);
+    void SetY(int y);
+    void SetName(string name);
 
     // Фун-ии получения данных из полей
     void GetX(int* xi);

@@ -27,7 +27,150 @@ int main() {
 	Rating MyRating;
 	Button MyButton;
 
+	Coin masCoin[5];
+	for (int i = 0; i < 5; i++)
+		masCoin[i].RandXYCoin();
+
+	cout << "Лабораторная 9" << endl;
+	cout << "МЯЧ: \n" << endl;
+	Ball Ball1;
+	Ball Ball2("Param");
+	Ball Ball3(1, 1, "One");
+
+	Ball* Ball4 = new Ball();
+	Ball* Ball5 = new Ball("Круглый");
+	Ball* Ball6 = new Ball(2, 2, "Два");
+
+	cout << "Статические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Ball1.DisplayBall();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Ball2.DisplayBall();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Ball3.DisplayBall();
+	cout << "" << endl;
+	cout << "Динамические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Ball4->DisplayBall();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Ball5->DisplayBall();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Ball6->DisplayBall();
+	cout << "\n\n" << endl;
+
+	/////////////
+
+	Platform Platform1;
+	Platform Platform2(35);
+	Platform Platform3(12, 12);
+
+	Platform* Platform4 = new Platform();
+	Platform* Platform5 = new Platform(45);
+	Platform* Platform6 = new Platform(30, 30);
+
+	cout << "ПЛАТФОРМА: \n" << endl;
+	cout << "Статические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Platform1.DisplayPlatform();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Platform2.DisplayPlatform();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Platform3.DisplayPlatform();
+	cout << "" << endl;
+	cout << "Динамические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Platform4->DisplayPlatform();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Platform5->DisplayPlatform();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Platform6->DisplayPlatform();
+	cout << "\n\n" << endl;
+
+	////////////	
+	cout << "МОНЕТА: \n" << endl;
+	Coin Coin1;
+	Coin Coin2(33);
+	Coin Coin3(23, 21);
+
+	Coin* Coin4 = new Coin();
+	Coin* Coin5 = new Coin(1);
+	Coin* Coin6 = new Coin(2, 2);
+
+	cout << "Статические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Coin1.DisplayCoin();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Coin2.DisplayCoin();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Coin3.DisplayCoin();
+	cout << "" << endl;
+	cout << "Динамические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Coin4->DisplayCoin();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Coin5->DisplayCoin();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Coin6->DisplayCoin();
+	cout << "\n\n" << endl;
+
+	////////////	
+	cout << "РЕЙТИНГ: \n" << endl;
+	Rating Rating1;
+	Rating Rating2(10);
+	Rating Rating3(10, masCoin);
+
+	Rating* Rating4 = new Rating();
+	Rating* Rating5 = new Rating(1);
+	Rating* Rating6 = new Rating(2, masCoin);
+
+	cout << "Статические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Rating1.DisplayRating();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Rating2.DisplayRating();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Rating3.DisplayRating();
+	cout << "" << endl;
+	cout << "Динамические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Rating4->DisplayRating();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Rating5->DisplayRating();
+	cout << "3) Конструктор с параметрами:" << endl;
+	Rating6->DisplayRating();
+	cout << "\n\n" << endl;
+
+	////////////	
+	cout << "КНОПКА: \n" << endl;
+
+	Button Button1;
+	Button Button2(1);
+
+	Button* Button4 = new Button();
+	Button* Button5 = new Button(1);
+
+	cout << "Статические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Button1.DisplayButton();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Button2.DisplayButton();
 	
+	cout << "" << endl;
+	cout << "Динамические объекты:" << endl;
+	cout << "1) Конструктор без параметров:" << endl;
+	Button4->DisplayButton();
+	cout << "2) Конструктор с 1-им параметром:" << endl;
+	Button5->DisplayButton();
+	
+	cout << "\n\n" << endl;
+
+	/////////////
+
+	
+
+
+
+	/*
 	cout << "\nЛаба 8. Модифицировать проект путем добавления в один из классов \nкак минимум одного статического поля и одного статического метода:" << endl;
 
 	// Формирование объектов класса Button:
@@ -169,4 +312,5 @@ int main() {
 		}
 	} while (f);
 	delete PlatformSquare;
+	*/
 }

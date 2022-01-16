@@ -17,8 +17,15 @@ public:
     // Конструктор
     Platform();
 
-    // Конструктор
+    // Конструктор с одним параметром ВЫсота
+    Platform(int height);
+
+    // Конструктор 
     Platform(int angle, int height);
+
+    void SetAngle(int angle);
+    void SetHeight(int height);
+
 
     // Фун-ии получения данных из полей
     int GetAngle();
@@ -26,9 +33,6 @@ public:
 
     // Деструктор
     ~Platform();
-
-    // Инициализация структуры 
-    void SetPlatform(int anglei, int heighti);
 
     // Ввод 
     void InpPlatformData();

@@ -7,6 +7,26 @@ Coin::Coin()
     y = 0;
 }
 
+Coin::Coin(int x)
+{
+    this->x = x;
+    y = 0;
+}
+
+Coin::Coin(int x, int y)
+{
+    this->x = x;
+    this->y = y;
+}
+
+void Coin::SetX(int x) {
+    this->x = x;
+}
+void Coin::SetY(int y) {
+    this->y = y;
+}
+
+
 // Фун-ии получения данных из полей
 int Coin::GetX()
 {
@@ -16,13 +36,6 @@ int Coin::GetX()
 int Coin::GetY()
 {
     return y;
-}
-
-// Инициализация структуры 
-void Coin::SetCoin(int xi, int yi)
-{
-    x = xi;
-    y = yi;
 }
 
 // Ввод 
@@ -63,3 +76,4 @@ void KoordExchange(Ball& ball, Coin& coin)
     ball.y = coin.y;
     coin.y = y;
 }
+

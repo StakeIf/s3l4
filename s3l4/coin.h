@@ -18,6 +18,11 @@ private:
 public:
     // Конструктор
     Coin();
+    Coin(int x);
+    Coin(int x, int y);
+
+    void SetX(int x); 
+    void SetY(int y);
 
     // Фун-ии получения данных из полей
     int GetX();

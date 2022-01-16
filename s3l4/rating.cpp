@@ -9,19 +9,38 @@ Rating::Rating()
         ArrayCoins[i] = C;
 }
 
-// Фун-ии получения данных из полей
-int Rating::GetPoints()
+Rating::Rating(int points)
 {
-    return points;
+    this->points = points;
+    Coin C;
+    for (int i = 0; i < 5; i++)
+        ArrayCoins[i] = C;
 }
 
-// Инициализация структуры 
-void Rating::SetRating(int pointsi, Coin array[5])
+Rating::Rating(int pointsi, Coin array[5])
 {
     points = pointsi;
     Coin C;
     for (int i = 0; i < 5; i++)
         ArrayCoins[i] = array[i];
+}
+
+void Rating::SetPoint(int pointsi)
+{
+    points = pointsi;
+}
+
+void Rating::SetCoinArray(Coin array[5])
+{
+    Coin C;
+    for (int i = 0; i < 5; i++)
+        ArrayCoins[i] = array[i];
+}
+
+// Фун-ии получения данных из полей
+int Rating::GetPoints()
+{
+    return points;
 }
 
 // Вывод 
@@ -42,4 +61,7 @@ void Rating::PlusRating() {
 Rating::~Rating()
 {
     ;
+}
+
+
 }
