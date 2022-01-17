@@ -20,6 +20,25 @@ int main() {
 	system("chcp 1251");
 	system("cls");
 
+	cout << "Лабораторная 10\n" << endl;
+	cout << "Значение в отрезке [0;15]\n" << endl;
+	Rating rat1(-5);
+	cout << "Текущее значение: " << rat1.GetPoints() << endl;
+
+	rat1.SetPoint(16);
+	cout << "Текущее значение: " << rat1.GetPoints() << endl;
+
+	rat1.SetPoint(14);
+	cout << "Текущее значение: " << rat1.GetPoints() << endl;
+
+	rat1.PlusRating();
+	cout << "Текущее значение: " << rat1.GetPoints() << endl;
+
+	rat1.PlusRating();
+	cout << "Текущее значение: " << rat1.GetPoints() << endl;
+
+
+
 	/*
 	Ball MyBall;
 	Platform MyPlatform;
@@ -30,7 +49,7 @@ int main() {
 
 	/*Coin masCoin[5];
 	for (int i = 0; i < 5; i++)
-		masCoin[i].RandXYCoin();*/
+		masCoin[i].RandXYCoin();
 
 	cout << "Лабораторная 11" << endl;
 	Coin Coin1[3], Coin2[2][2];

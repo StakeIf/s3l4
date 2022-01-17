@@ -15,7 +15,7 @@ Button::Button(bool OnOff)
 //Получение значения 
 void Button::SetButton(bool onoffi)
 {
-    OnOff = onoffi;
+    this->OnOff = onoffi;
 }
 
 // Фун-ии получения данных из полей
@@ -80,3 +80,4 @@ void Button::reprint(void)
         uk = uk->prev;
     }
 }
+

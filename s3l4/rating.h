@@ -28,4 +28,7 @@ public:
 
     //Увеличить рейтинг
     void PlusRating();
+
+    // Проверка числа на подходящее для Рейтинга
+    bool IsRightRating(int Rating);
 };
