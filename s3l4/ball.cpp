@@ -3,24 +3,25 @@
 // Конструкторы
 Ball::Ball()
 {
-    x = 0;
-    y = 0;
-    Name = "";
-}
+    this->x = 0;
+    this->y = 0;
+    this->Name = "";
 
+    x = 0;
+}
 Ball::Ball(string name)
 {
     x = 0;
     y = 0;
     this->Name = name;
 }
-
-Ball::Ball(int x, int y, string name)
+//Конструктор с параметрами 
+Ball::Ball(int x, int y, string name): Coord(x,y)
 {
-    this->x = x;
-    this->y = y;
     this->Name = name;
 }
+
+/*
 //Установщики значений
 void Ball::SetX(int x) 
 {
@@ -31,12 +32,14 @@ void Ball::SetY(int y)
 {
     this->y = y;
 }
+*/
 
 void Ball::SetName(string name)
 {
     this->Name = name;
 }
 
+/*
 // Фун-ии получения данных из полей
 void Ball::GetX(int* xi)
 {
@@ -47,6 +50,7 @@ void Ball::GetY(int* yi)
 {
     *yi = y;
 }
+*/
 
 void Ball::GetNameLink(string& name)
 {
@@ -54,15 +58,11 @@ void Ball::GetNameLink(string& name)
 }
 
 // Ввод 
-void Ball::InpBallData()
+void Ball::Inp()
 {
-    cout << "Введите x-координату шара: ";
-    cin >> x;
-    cout << "Введите y-координату шара: ";
-    cin >> y;
+    Coord::Inp();
     cout << "Введите имя шара: ";
     cin >> Name;
-
 }
 
 // Вывод 
@@ -91,4 +91,26 @@ Ball::~Ball()
     ;
 }
 
+// Виртуальная функция вывода сообщения на экран, чем является объект
+string Ball::Who()
+{
+    return "Мяч ";
+}
+
+//Перегрузка оператора присваивания 
+Ball& Ball::operator=(Coord& xy) 
+{
+    this->x = xy.GetX();
+    this->y = xy.GetY();
+
+    return *this;
+}
+
+// Расширение действий оператора <<
+std::ostream& operator<< (std::ostream& out, const Ball& ball) 
+{
+    out << "Данные шара: \n  x = " << ball.x << "\n  y = " << ball.y << "\n  Name -  " << ball.Name << endl;
+
+    return out;
+}
 

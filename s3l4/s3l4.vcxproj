@@ -142,6 +142,8 @@
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="button.cpp" />
     <ClCompile Include="coin.cpp" />
+    <ClCompile Include="Coord.cpp" />
+    <ClCompile Include="Persone.cpp" />
     <ClCompile Include="platform.cpp" />
     <ClCompile Include="rating.cpp" />
     <ClCompile Include="s3l4.cpp" />
@@ -150,6 +152,8 @@
     <ClInclude Include="ball.h" />
     <ClInclude Include="button.h" />
     <ClInclude Include="coin.h" />
+    <ClInclude Include="Coord.h" />
+    <ClInclude Include="Persone.h" />
     <ClInclude Include="platform.h" />
     <ClInclude Include="rating.h" />
   </ItemGroup>

@@ -4,6 +4,8 @@
 #include "Button.h"
 #include "Coin.h"
 
+#include "Coord.h"
+
 #include <Windows.h>
 
 Button* Button::lastButton = NULL;
@@ -20,6 +22,97 @@ int main() {
 	system("chcp 1251");
 	system("cls");
 
+	Ball ball1(1,2, "Три");
+	ball1.Inp();
+	cout << endl;
+	ball1.DisplayBall();
+
+	/*
+	cout << "Лабораторная 12\n" << endl;
+	Ball Ball1(1, 2, "Pop");
+	Coord Coord1(3,4);
+
+	cout << "3) Продемонстрировать перегрузку метода \nбазового класса в производном классе\n(с вызовом метода базового класса и без такого вызова)\n" << endl;
+	Coord1.Display();
+	Ball1.DisplayBall();
+	cout << endl;
+	Coord1.MyLocation();
+	Ball1.MyLocation();
+	
+	////
+
+	Ball ball2(1, 1, "one");
+	ball2.DisplayBall();
+
+	////
+
+	Ball Ball1(1, 2, "Pop");
+	Coord Coord1(3, 4);
+
+	cout << "5) Выполнить перегрузку оператора присваивания объекту\nпроизводного класса объектов базового класса\n" << endl;
+
+	Coord1.Display();
+	Ball1.DisplayBall();
+
+	Ball1 = Coord1;
+
+	Coord1.Display();
+	Ball1.DisplayBall();
+
+	/// <summary>
+	
+
+	Ball yourBall(2, 2, "Two");
+	cout << "6) Заменить методы Display используя операции << для C++" << endl;
+	cout << yourBall << endl;
+	*/
+
+	/*
+	Ball Ball1(1, 2, "Pop");
+	Coord Coord1(3, 4);
+
+	cout << "7) Придумать разумное использование виртуальных функций и создать их в вашем проекте." << endl << endl;
+	Coord1.Display();
+	Ball1.DisplayBall();
+	cout << endl;
+	Coord1.MyLocation();
+	Ball1.MyLocation();
+
+	Coord point(1,1);
+	Ball myach(2,3, "Четыре");
+	Coord* ppoint = &myach;
+	Ball* pmyach = &myach;
+	Coord* ppoint2 = &point;
+
+	cout << endl;
+	cout << "Объект класса Ball" << endl;
+	myach.DisplayBall();
+	cout << endl;
+	cout << "Указатель класса Coord на класс Ball" << endl;
+	ppoint->Display();
+	cout << endl;
+	cout << "Указатель класса Coord на класс Ball" << endl;
+	ppoint2->Display();
+	cout << endl;
+	cout << "Вызов виртуальной функции через не виртуальную базового класса" << endl;
+	cout << "от объекта класса Ball" << endl;
+	myach.MyLocation();
+	cout << endl;
+	cout << "Вызов виртуальной функции через не виртуальную базового класса" << endl;
+	cout << "от объекта класса Coord" << endl;
+	point.MyLocation();
+	cout << endl;
+	cout << "от указателя Coord на объект класса Ball" << endl;
+	cout << ppoint->Who() << endl;
+	cout << endl;
+	cout << "от указателя Coord на объект класса Coord" << endl;
+	cout << ppoint2->Who() << endl;
+	cout << endl;
+	cout << "от указателя Ball на объект класса Ball" << endl;
+	cout << pmyach->Who() << endl;
+
+
+	/*
 	cout << "Лабораторная 10\n" << endl;
 	cout << "Значение в отрезке [0;15]\n" << endl;
 	Rating rat1(-5);
@@ -36,8 +129,6 @@ int main() {
 
 	rat1.PlusRating();
 	cout << "Текущее значение: " << rat1.GetPoints() << endl;
-
-
 
 	/*
 	Ball MyBall;

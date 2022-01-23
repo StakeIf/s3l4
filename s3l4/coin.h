@@ -7,27 +7,30 @@
 #include <conio.h>
 
 #include "ball.h"
+#include "Coord.h"
+
 
 using namespace std;
 
-class Coin
+class Coin : public Coord
 {
 private:
-    int x = 0;
-    int y = 0;
+    //int x = 0;
+    //int y = 0;
 public:
     // Конструктор
     Coin();
     Coin(int x);
     Coin(int x, int y);
 
+    /*
     void SetX(int x); 
     void SetY(int y);
 
     // Фун-ии получения данных из полей
     int GetX();
     int GetY();
-
+    */
     // Деструктор
     ~Coin();
 
@@ -35,7 +38,7 @@ public:
     void SetCoin(int x, int y);
 
     // Ввод 
-    void InpCoinData();
+    //void InpCoinData();
 
     // Вывод  на экран
     void DisplayCoin();
@@ -45,4 +48,7 @@ public:
 
     // Дружественная функция обмена кординатами классов Ball и Coin
     friend void KoordExchange(Ball& ball, Coin& Coin);
+
+    // Виртуальная функция вывода сообщения на экран, чем является объект
+    string Who();
 };

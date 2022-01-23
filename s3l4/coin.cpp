@@ -19,19 +19,13 @@ Coin::Coin(int x, int y)
     this->y = y;
 }
 
+/*
 void Coin::SetX(int x) {
     this->x = x;
 }
 void Coin::SetY(int y) {
     this->y = y;
 }
-
-void Coin::SetCoin(int x, int y) {
-    this->x = x;
-    this->y = y;
-}
-
-
 // Фун-ии получения данных из полей
 int Coin::GetX()
 {
@@ -42,8 +36,7 @@ int Coin::GetY()
 {
     return y;
 }
-
-// Ввод 
+// Ввод
 void Coin::InpCoinData()
 {
     cout << "Введите x-координату шара: ";
@@ -51,6 +44,13 @@ void Coin::InpCoinData()
     cout << "Введите y-координату шара: ";
     cin >> y;
 }
+*/
+
+void Coin::SetCoin(int x, int y) {
+    this->x = x;
+    this->y = y;
+}
+
 
 // Вывод 
 void Coin::DisplayCoin()
@@ -80,5 +80,10 @@ void KoordExchange(Ball& ball, Coin& coin)
     y = ball.y;
     ball.y = coin.y;
     coin.y = y;
+}
+
+string Coin::Who()
+{
+    return "Монета ";
 }
 
